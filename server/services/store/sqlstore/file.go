@@ -14,14 +14,14 @@ import (
 
 func (s *SQLStore) saveFileInfo(db sq.BaseRunner, fileInfo *mmModel.FileInfo) error {
 	query := s.getQueryBuilder(db).
-		Insert(s.tablePrefix+"file_info").
+		Insert(s.tablePrefix+"fileinfo").
 		Columns(
 			"id",
 			"create_at",
 			"name",
 			"extension",
 			"size",
-			"delete_at",
+			"deleteat",
 			"path",
 			"archived",
 		).
@@ -54,14 +54,14 @@ func (s *SQLStore) getFileInfo(db sq.BaseRunner, id string) (*mmModel.FileInfo, 
 		Select(
 			"id",
 			"create_at",
-			"delete_at",
+			"deleteat",
 			"name",
 			"extension",
 			"size",
 			"archived",
 			"path",
 		).
-		From(s.tablePrefix + "file_info").
+		From(s.tablePrefix + "fileinfo").
 		Where(sq.Eq{"Id": id})
 
 	row := query.QueryRow()

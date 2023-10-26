@@ -1,1 +1,1 @@
-{{ addColumnIfNeeded "file_info" "path" "varchar(512)" "" }}
+{{ addColumnIfNeeded "fileinfo" "path" "varchar(512)" "" }}

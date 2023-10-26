@@ -1,7 +1,7 @@
-CREATE TABLE IF NOT EXISTS {{.prefix}}file_info (
+CREATE TABLE IF NOT EXISTS {{.prefix}}fileinfo (
     id varchar(26) NOT NULL,
     create_at BIGINT NOT NULL,
-    delete_at BIGINT,
+    deleteat BIGINT,
     name TEXT NOT NULL,
     extension VARCHAR(50) NOT NULL,
     size BIGINT NOT NULL,
