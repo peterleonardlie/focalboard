@@ -25,7 +25,7 @@ const SetWindowTitleAndIcon = (): null => {
         } else if (Utils.isFocalboardPlugin()) {
             document.title = 'Boards - Mattermost'
         } else {
-            document.title = 'Focalboard'
+            document.title = 'APEX Board'
         }
     }, [board?.title, activeView?.title])
 
